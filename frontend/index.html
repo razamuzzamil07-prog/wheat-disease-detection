@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wheat Leaf Disease Detection</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="logo">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2v20M12 6c-3 0-5-2-5-5 3 0 5 2 5 5zm0 0c3 0 5-2 5-5-3 0-5 2-5 5zm0 6c-3 0-5-2-5-5 3 0 5 2 5 5zm0 0c3 0 5-2 5-5-3 0-5 2-5 5zm0 6c-3 0-5-2-5-5 3 0 5 2 5 5zm0 0c3 0 5-2 5-5-3 0-5 2-5 5z"
+                stroke="#2e7d32" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <h1>Wheat Leaf Disease Detection</h1>
+          <p>AI-assisted classification of common wheat leaf diseases</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="card upload-card">
+        <h2>Upload a wheat leaf image</h2>
+        <p class="hint">Supported: JPG, PNG, BMP, WEBP &middot; max 10 MB</p>
+
+        <div id="dropzone" class="dropzone" tabindex="0" role="button"
+             aria-label="Upload a wheat leaf image">
+          <svg width="46" height="46" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 16V4m0 0l-4 4m4-4l4 4M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3"
+                  stroke="#8aa88f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p><strong>Drag &amp; drop</strong> an image here, or <span class="link">browse files</span></p>
+          <input id="file-input" type="file" accept="image/jpeg,image/png,image/bmp,image/webp" hidden />
+        </div>
+
+        <div id="preview-wrap" class="preview-wrap hidden">
+          <img id="preview" alt="Selected leaf preview" />
+          <div class="preview-actions">
+            <button id="predict-btn" class="btn primary">Detect Disease</button>
+            <button id="clear-btn" class="btn ghost">Clear</button>
+          </div>
+        </div>
+
+        <div id="status" class="status hidden" role="status"></div>
+      </section>
+
+      <section id="result-card" class="card result-card hidden" aria-live="polite">
+        <h2>Prediction Result</h2>
+
+        <div class="result-head">
+          <span id="result-name" class="result-name"></span>
+          <span id="result-severity" class="badge"></span>
+        </div>
+
+        <div class="confidence">
+          <div class="confidence-label">
+            <span>Confidence</span><span id="confidence-value"></span>
+          </div>
+          <div class="confidence-bar">
+            <div id="confidence-fill" class="confidence-fill"></div>
+          </div>
+        </div>
+
+        <div id="result-description" class="result-text"></div>
+
+        <div class="info-grid">
+          <div class="info-block">
+            <h3>Symptoms</h3>
+            <p id="result-symptoms"></p>
+          </div>
+          <div class="info-block">
+            <h3>Recommended Action</h3>
+            <p id="result-treatment"></p>
+          </div>
+        </div>
+
+        <div class="probs">
+          <h3>All class probabilities</h3>
+          <ul id="prob-list"></ul>
+        </div>
+
+        <p id="disclaimer" class="disclaimer"></p>
+      </section>
+
+      <section class="card about-card">
+        <h2>Supported classes</h2>
+        <ul class="class-list">
+          <li>Healthy</li>
+          <li>Leaf Rust (Brown Rust)</li>
+          <li>Stripe Rust (Yellow Rust)</li>
+          <li>Powdery Mildew</li>
+          <li>Septoria Leaf Blotch</li>
+        </ul>
+        <p class="disclaimer">
+          This system is an educational AI prototype. Predictions are AI-assisted and
+          dataset-dependent, and are not a replacement for professional agricultural diagnosis.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>AI-Based Plant Disease Detection &middot; Semester Project</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
