@@ -1,0 +1,37 @@
+{
+  "healthy": {
+    "display_name": "Healthy",
+    "severity": "none",
+    "description": "No visible disease symptoms detected. The leaf appears healthy.",
+    "symptoms": "Uniform green color, no spots, pustules or powdery growth.",
+    "treatment": "No treatment required. Continue standard crop management and monitoring."
+  },
+  "leaf_rust": {
+    "display_name": "Leaf Rust (Brown Rust)",
+    "severity": "high",
+    "description": "Fungal disease caused by Puccinia triticina. One of the most common and damaging wheat diseases worldwide.",
+    "symptoms": "Small, round, orange-brown pustules (uredinia) scattered mainly on the upper leaf surface.",
+    "treatment": "Apply triazole or strobilurin fungicides at early infection. Use resistant wheat varieties. Remove crop residues and avoid late nitrogen fertilization."
+  },
+  "stripe_rust": {
+    "display_name": "Stripe Rust (Yellow Rust)",
+    "severity": "high",
+    "description": "Fungal disease caused by Puccinia striiformis. Spreads rapidly in cool, humid conditions and can cause severe yield losses.",
+    "symptoms": "Yellow-orange powdery pustules arranged in long stripes along the leaf veins.",
+    "treatment": "Apply fungicides (e.g., tebuconazole, propiconazole) at first sign of disease. Plant resistant cultivars and avoid early sowing in humid regions."
+  },
+  "powdery_mildew": {
+    "display_name": "Powdery Mildew",
+    "severity": "medium",
+    "description": "Fungal disease caused by Blumeria graminis f. sp. tritici. Common in dense, heavily fertilized crops.",
+    "symptoms": "White to gray powdery fungal patches on leaf surfaces, which may later turn brown and cover whole leaves.",
+    "treatment": "Apply sulfur-based or triazole fungicides. Improve field ventilation, avoid excessive nitrogen, and use resistant varieties."
+  },
+  "septoria": {
+    "display_name": "Septoria Leaf Blotch",
+    "severity": "medium",
+    "description": "Fungal disease caused by Zymoseptoria tritici (formerly Septoria tritici). Favored by wet, moderate-temperature weather.",
+    "symptoms": "Irregular, elongated tan-brown lesions with small black fruiting bodies (pycnidia) inside the lesions.",
+    "treatment": "Apply fungicides at flag-leaf stage. Rotate crops, plow under residues, and choose tolerant varieties."
+  }
+}
